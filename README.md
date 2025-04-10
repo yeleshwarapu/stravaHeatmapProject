@@ -1,5 +1,5 @@
 # Purpose
-Generate Strava Heatmaps for unexplored areas
+Generate Strava Route Files (in GPX format) for unexplored areas based off previous heatmap data.
 
 # TODO
 
