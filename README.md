@@ -9,3 +9,5 @@ Generate Strava Route Files (in GPX format) for unexplored areas based off previ
 - [ ]  Get the runtime of the program
 - [ ]  Create new routes for Strava'
 - [ ]  Generate custom heatmaps based on distances provided by User
+- [ ]  Implement Cafe stops
+- [ ]  Filter by desired elevation difficulty and distances
