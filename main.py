@@ -17,11 +17,10 @@ G = ox.graph_from_place(CITY, network_type='bike', simplify=True)
 G = G.to_undirected()
 
 # --- Main Loop ---
-used_edges = set()
-route_count = 1
-current_node = random.choice(list(G.nodes))  # Start randomly
-
 def main():
+    used_edges = set()
+    route_count = 1
+    current_node = random.choice(list(G.nodes))  # Start randomly
     while True:
         found_route = False
 
