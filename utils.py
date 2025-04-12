@@ -2,6 +2,14 @@ import gpxpy
 import gpxpy.gpx
 import random
 
+CITY = "San Jose, California, USA"
+CHUNK_DISTANCE_METERS = 32186.8  # 20 miles
+INITIAL_RADIUS = 2500
+MAX_RADIUS = 15000
+RADIUS_STEP = 1000
+MIN_ROUTE_DISTANCE = 0.9 * CHUNK_DISTANCE_METERS
+MAX_ROUTE_DISTANCE = 1.1 * CHUNK_DISTANCE_METERS
+
 def route_length(G, route):
     return sum(G.edges[route[i], route[i + 1], 0]['length'] for i in range(len(route) - 1))
 
