@@ -8,17 +8,21 @@ MIN_ROUTE_DISTANCE = 0.9 * CHUNK_DISTANCE_METERS
 MAX_ROUTE_DISTANCE = 1.1 * CHUNK_DISTANCE_METERS
 
 
-def route_length(G, route):
-    return sum(G.edges[route[i], route[i + 1], 0]['length'] for i in range(len(route) - 1))
+def route_length(graph, route):
+    ## route is a list of nodes (e.g., [A, B, C]).
+    ## loops over adjacent pairs: (A, B), (B, C)
+    ## each edge between consecutive nodes, it grabs the 'length' attribute from the graph's edge data.
+    ## sums up these lengths and returns the total
+    return sum(graph.edges[route[i], route[i + 1], 0]['length'] for i in range(len(route) - 1))
 
-def route_to_gpx(G, route):
+def route_to_gpx(graph, route):
     gpx = gpxpy.gpx.GPX()
     track = gpxpy.gpx.GPXTrack()
     gpx.tracks.append(track)
     segment = gpxpy.gpx.GPXTrackSegment()
     track.segments.append(segment)
     for node in route:
-        pt = G.nodes[node]
+        pt = graph.nodes[node]
         segment.points.append(gpxpy.gpx.GPXTrackPoint(pt['y'], pt['x']))
     return gpx.to_xml()
 
