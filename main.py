@@ -12,12 +12,13 @@ MIN_ROUTE_DISTANCE = 0.9 * CHUNK_DISTANCE_METERS
 MAX_ROUTE_DISTANCE = 1.1 * CHUNK_DISTANCE_METERS
 
 # --- Load Graph ---
-print("Downloading San Jose road network...")
-G = ox.graph_from_place(CITY, network_type='bike', simplify=True)
-G = G.to_undirected()
+
 
 # --- Main Loop ---
 def main():
+    print("Downloading San Jose road network...")
+    G = ox.graph_from_place(CITY, network_type='bike', simplify=True)
+    G = G.to_undirected()
     used_edges = set()
     route_count = 1
     current_node = random.choice(list(G.nodes))  # Start randomly
