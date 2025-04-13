@@ -9,7 +9,7 @@ from time import sleep
 # === Config ===
 gpx_folder = "activities"
 output_folder = "gpx_output"
-distance_threshold_meters = 1000000
+distance_threshold_meters = 1000
 
 geolocator = Nominatim(user_agent="gpx_cluster_namer")
 
