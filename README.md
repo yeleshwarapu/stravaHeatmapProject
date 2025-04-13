@@ -3,8 +3,9 @@ Generate Strava Route Files (in GPX format) for unexplored areas based off previ
 
 # TODO
 
-- [ &#9745;]  Combine Strava activity into a single GPX file
-  - [ &#9745;]  Based on Location into multiple files
+&#9745;  Combine Strava activity into a single GPX file
+  - &#9745;  Based on Location into multiple files
+
 - [ ]  Chunk out bike rides into 20 mile rides into different GPX Files
 - [ ]  Filter out Highways and Parking Lots, Private Roads, Footpath , Pedestrian, Parks, Parking lots,
 - [ ]  Get the runtime of the program
